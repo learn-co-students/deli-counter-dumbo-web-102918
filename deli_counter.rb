@@ -2,15 +2,16 @@ def line (array)
 
   if array.length == 0
     puts "The line is currently empty."
-  
+
 
   else string = "The line is currently: "
 
   array.each.with_index(1) do |people,index|
     string+= "#{index}. #{people} "
   end
-  string.chop!
-  string.strip
+  string.slice(-2)
+  #string.chop!
+  #string.strip
   #string.chop takes off last character, chop! returns same string
   #string.strip removes white space
   puts "#{string}"
