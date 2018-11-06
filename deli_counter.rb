@@ -9,16 +9,17 @@ def line (array)
   array.each.with_index(1) do |people,index|
     string+= "#{index}. #{people} "
   end
-  string.slice(-2)
-  #string.chop!
-  #string.strip
-  #string.chop takes off last character, chop! returns same string
+  string.chop!
+  string.strip
   #string.strip removes white space
+  #string.chop takes off last character, chop! returns same string
   puts "#{string}"
   #why we have an end after puts??
   end
 end
-
+#other ways to solve this
+# do a loop with array , either each or use a counter
+# after, jstring base with join loop to turn into string without commas in array
 def take_a_number(array, person)
   array.push(person)
   number = array.length
